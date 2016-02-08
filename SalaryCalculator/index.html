@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Input Title Classification</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">    
+    <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
+    <script language="javascript" type="text/javascript" src="calculator_jquery_javascript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+    <body>
+        
+        <div class="container col-lg-2 col-md-3 col-sm-4 col-xs-8">
+            <div class="row">    
+                <select id="principle_ap" multiple class="form-control principle_ap">
+                    <option value=""></option>
+                    <option value="principle">Principal</option>
+                    <option value="ap">Assistant Principal</option>
+                </select>
+            </div>
+        </div>
+            <form id="principle" class="form-horizontal principle form-rounded-corners">
+                <div id="principal_container" class="container">
+                   
+                    <div class="row margin-bottom-20px">
+                        <div class="col-lg-6 col-md-7 col-sm-10 col-xs-8 col-lg-offset-2 col-md-pull-1 titleEffects margin-top1-pct center-align"> 
+                            <p class="text-margin-top-15px">Principal Incentive Calculator<p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_highest_priority_selection_group">
+                                    <p class="bold-title">Highest-Priority</p>
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_highest_priority_elementary">
+                                    Elementary
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_highest_priority_elementary_600Less">
+                                    ECE-8 &lt;600 students    
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_highest_priority_elementary_600Plus">
+                                    ECE-8 &gt;600 students    
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>   
+                                    <input type="checkbox" name="chk" value="" id="principle_highest_priority_secondary">
+                                    Secondary     
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 margin-top-20px">
+                            <input type="text" id="principle_highest_priority_number_years" class="form-control width_num_years inline placeholder" placeholder="# of years served" name="numberofyears" disabled >
+                            <span id="errmsghp" class="inline"></span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 margin-top-20px">
+                            <div id="principle_highest_priority_years_output" class="inline totalsOutput" ></div>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principal_pathways_selection_group">
+                                    <p class="bold-title">Pathways</p>
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principal_pathways_w_out_middle_school">
+                                    Pathways
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_pathways_middle_school" >
+                                    Pathways Middle School W/Principal Supervisor
+                                </label>
+                            </div>    
+                            <div class="checkbox indent-margin-left-20px">    
+                                <label>
+                                    <select id="principle_pathways_select" class="principle_pathways_select">
+                                        <option value="">Select a school</option>
+                                        <option value="bruce">Bruce Randolph Middle School</option>
+                                        <option value="contempory">Contempory Learning Academy MS</option>
+                                        <option value="montbello">DCIS at Montbello MS</option>
+                                        <option value="wyman">DCIS at Wyman MS</option>
+                                        <option value="mlk">MLK MS</option>
+                                        <option value="noel">Noel MS</option>
+                                        <option value="vista">Vista MS</option>
+                                        <option value="generations">West Generations MS</option>
+                                        <option value="leadership">West Leadership MS</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 margin-top-20px">
+                            <input type="text" id="principle_pathways_number_years" class="form-control width_num_years" placeholder="# of years served" name="numberofyears" disabled >
+                            <span id="errmsgpath"></span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 margin-top-20px">
+                            <div id="principle_pathways_years_output" class="inline totalsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_title1_selection_group">
+                                    <p class="bold-title">Title 1</p>  
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_title1_elementary" >
+                                    Elementary
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="title1_elementary_600Less">
+                                    ECE-8 &lt;600 students   
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="title1_elementary_600Plus">
+                                    ECE-8 &gt;600 students    
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_title1_secondary" >
+                                    Secondary
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 margin-top-20px">
+                            <input type="text" id="principle_title1_number_years" class="form-control width_num_years inline placeholder" placeholder="# of years served" name="numberofyears" disabled >
+                            <span id="errmsgt1" class="inline"></span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 margin-top-20px">
+                            <div id="principle_title1_number_years_output" class="inline totalsOutput" ></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <p class="bold-title">Top-Performing</p>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_top_performing_blue">
+                                    Blue
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_top_performing_green" >
+                                    Green
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-3"></div>
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-top-20px">
+                            <div id="principle_top_performing_output" class="inline totalsOutput" ></div>
+                        </div>
+                    </div>    
+                    <div class="row">    
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <p class="bold-title">High-Growth</p>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_high_growth">
+                                    High-Growth
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-3"></div>
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-top-20px">
+                            <div id="principle_high_growth_output" class="inline totalsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <p class="bold-title">Enrollment Supplement</p>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="principle_1000_plus" >
+                                    1000+ Students
+                                </label>
+                            </div>
+                            <div class="checkbox indent-margin-left-20px">
+                                <label>    
+                                    <input type="checkbox" name="chk" value="" id="principle_750-999" >
+                                    750-999 Students
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-3"></div>
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-top-20px">
+                            <div id="principle_enrollment_supplement_output" class="inline totalsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="row"> <!-- no-gutter -->
+                        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <p class="bold-title">Principal Total Incentives</p>
+                            <!-- margin-left-neg-15px
+                            -->
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-5"></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"> <!-- margin-left-neg-15px -->
+                            <div id="total_incentives_amount_output" class="totalsOutput inline"></div>
+                        </div>
+                    </div>
+                    <div class="row margin-top-20px">
+                        <div class="col-sm-offset-2 col-xs-offset-2 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                            <button type="button" class="btn btn-default" id="calculate_total">Calculate Total</button>
+                            <button type="reset" class="btn btn-default" id="clear_form">Clear Form</button>
+                        </div>
+                    </div>
+                    <div class="row margin-bottom30px">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" class="height34px"></div>
+                    </div>
+                    
+                </div>
+            </form>
+        
+        <form id="ap" class="form-horizontal ap form-rounded-corners">
+            <div class="container" id="ap_container">
+                <div class="row margin-bottom-20px">
+                    <!-- <div class="col-lg-1 col-md-1"></div> -->
+                    <div class="col-lg-5 col-md-8 col-sm-6 col-xs-12 titleEffects margin-top1-pct center-align">
+                        <p class="text-margin-top-15px">Assistant Principal Incentive Calculator<p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_highest_priority_selection_group">
+                                <p class="bold-title">Highest-Priority</p>  
+                            </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_highest_priority_elementary" >
+                                Elementary
+                            </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="ap_highest_priority_elementary_600Less">
+                                    ECE-8 &lt;600 students    
+                                </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="ap_highest_priority_elementary_600Plus">
+                                    ECE-8 &gt;600 students    
+                                </label>
+                            </div>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>   
+                                <input type="checkbox" name="chk" value="" id="ap_highest_priority_secondary" >
+                                Secondary
+                            </label> 
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-4 col-xs-4 margin-top-20px">
+                        <div id="ap_highest_output" class="totalsOutput inlineBlock"></div>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_pathways_selection_group">
+                                <p class="bold-title">Pathways</p>
+                            </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>
+                                Pathways
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-4 col-xs-4 margin-top-20px">
+                        <div id="ap_pathways_output" class="totalsOutput inlineBlock"></div>  
+                    </div>                  
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_title1_selection_group">
+                                <p class="bold-title">Title 1</p>  
+                            </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_title1_elementary" >
+                                Elementary
+                            </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="ap_title1_elementary_600Less">
+                                    ECE-8 &lt;600 students   
+                                </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                                <label>
+                                    <input type="checkbox" name="chk" value="" id="ap_title1_elementary_600Plus">
+                                    ECE-8 &gt;600 students    
+                                </label>
+                            </div>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_title1_secondary" >
+                                Secondary
+                            </label>
+                        </div>       
+                    </div>
+                    <div class="col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-4 col-xs-4 margin-top-20px">
+                        <div id="ap_title1_output" class="totalsOutput inlineBlock"></div>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="form-group col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                        <p class="bold-title">Top-Performing</p>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>    
+                                <input type="checkbox" name="chk" value="" id="ap_top_performing_blue" >
+                                Blue
+                            </label>
+                        </div>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_top_performing_green" >
+                                Green
+                            </label> 
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-4 col-xs-4 margin-top-20px">
+                        <div id="ap_top_performing_output" class="totalsOutput inlineBlock"></div>
+                    </div>
+                </div>    
+                <div class="row">    
+                    <div class="form-group col-lg-3 col-md-3 col-sm-8 col-xs-12">
+                        <p class="bold-title">High-Growth</p>
+                        <div class="checkbox indent-margin-left-20px">
+                            <label>
+                                <input type="checkbox" name="chk" value="" id="ap_high_growth" >
+                                High-Growth
+                            </label> 
+                        </div>
+                    </div> 
+                    <div class="col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-4 col-xs-4 margin-top-20px" >
+                        <div id="ap_high_growth_output" class="totalsOutput inlineBlock"></div>
+                    </div>
+                </div>
+                <div class="row"> <!-- no-gutter  -->
+                    <div class="form-group col-sm-offset-1 col-xs-offset-1 col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                        <p class="bold-title">
+                            Assistant Principal Total Incentives
+                        </p>
+                    </div>
+                    <div class="col-lg-offset-1 col-sm-offset-2 col-lg-2 col-md-2 col-sm-2 col-xs-12"> <!-- margin-left-neg-15px -->
+                        <div id="ap_total_incentives_output" class="totalsOutput inline"></div>
+                    </div>    
+                </div>
+                <div class="row margin-top-20px">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <button type="button" class="btn btn-default" id="ap_calculate_total">Calculate Total</button>
+                        <button type="reset" class="btn btn-default" id="ap_clear_form">Clear Form</button>
+                    </div>
+                </div>
+                <div class="row margin-bottom30px">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" class="height34px"></div>
+                </div>
+                
+            </div>
+         
+        </form>
+        
+    </body>
+    
+</html>

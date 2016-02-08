@@ -1,0 +1,161 @@
+html, body, h1, form, fieldset, legend, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 20px;
+}
+
+form {
+    display: none;
+}
+
+#principle {
+    /*
+    border: 1px groove black;
+    width: 50%;
+    */
+    margin-top: 10%;
+}
+
+#ap {
+    margin-top: 10%;
+}
+input.width_num_years {
+    width: 135px;
+}
+
+div.inline, span.inline {
+    float: left;
+    display: inline-block
+}
+
+inlineBlock {
+    display: inline-block;
+}
+
+div.checkbox {
+    width: 100%;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+#errmsghp,#errmsgpath,#errmsgt1  {
+    color: red;
+}
+
+.totalsOutput {
+    background-color: #ffaa00;
+    width: 135px;
+    height: 34px;
+    opacity: 1;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0,0,0,.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.inline {
+    display: inline;
+}
+
+.margin-bottom30px {
+    margin-bottom: 30px;
+}
+
+.margin-top1-pct {
+    margin-top: 1%;
+}
+.text-align-right {
+    text-align: right;   
+}
+
+.text-margin-left-20px {
+    margin-left: 20px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.titleEffects {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #75c37b;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0,0,0,.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.no-gutter-padding {
+    padding-right:0;
+    padding-left:0;
+}
+
+#principal_container, #ap_container {
+    padding-left: 30px;
+    /*
+    border: 1px groove black;
+    */
+}
+
+.bold-title {
+    font-weight: bold;   
+}
+
+.margin-bottom-20px {
+    margin-bottom: 20px;
+}
+
+.margin-top-20px {
+    margin-top: 20px;
+}
+
+.margin-right-20px {
+    margin-right: 20px;
+}
+
+.margin-left-neg-15px {
+    margin-left: -15px;
+}
+
+.text-margin-top-15px {
+    margin-top: 15px;
+}
+
+.form-rounded-corners {
+    padding: 6px 12px;
+  /*
+    border: 1px solid black;
+    border-radius: 4px;
+  */
+    box-shadow: inset 0 1px 1px rgb(0,0,0,.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.indent-margin-left-20px {
+    margin-left: 20px;
+}
+
+.indent-margin-left-30px {
+    margin-left: 30px;
+}
+
+#principle_pathways_select {
+    width: 235px;
+    
+}
